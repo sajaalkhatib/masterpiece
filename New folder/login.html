@@ -6,76 +6,74 @@
   <title>Login Form</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <!-- <link rel="stylesheet" href="styles.css"> -->
-   <style>
+  <style>
     body {
-  background: linear-gradient(to right, #002147, #8b0000);
-  color: #fff;
-  font-family: 'Arial', sans-serif;
-}
+      background: linear-gradient(to right, #002147, #8b0000);
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+    }
 
-.card {
-  background-color: #fff;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 100%;
-}
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 100%;
+    }
 
-h1 {
-  font-weight: bold;
-  color: #8b0000;
-}
+    h1 {
+      font-weight: bold;
+      color: #8b0000;
+    }
 
-.animate-fade-in {
-  animation: fadeIn 1s ease-in-out;
-}
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.btn-danger {
-  background-color: #8b0000;
-  border: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+    .btn-danger {
+      background-color: #8b0000;
+      border: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
-.btn-danger:hover {
-  background-color: #b22222;
-  transform: scale(1.05);
-}
+    .btn-danger:hover {
+      background-color: #b22222;
+      transform: scale(1.05);
+    }
 
-.text-primary {
-  color: #002147 !important;
-}
+    .text-primary {
+      color: #002147 !important;
+    }
 
-.text-primary:hover {
-  text-decoration: underline;
-}
+    .text-primary:hover {
+      text-decoration: underline;
+    }
 
-.text-danger:hover {
-  text-decoration: underline;
-}
+    .text-danger:hover {
+      text-decoration: underline;
+    }
 
-.form-control {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.3s ease;
-}
+    .form-control {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s ease;
+    }
 
-.form-control:focus {
-  border-color: #8b0000;
-  box-shadow: 0 0 5px rgba(139, 0, 0, 0.5);
-}
-</style>
+    .form-control:focus {
+      border-color: #8b0000;
+      box-shadow: 0 0 5px rgba(139, 0, 0, 0.5);
+    }
+  </style>
 </head>
 <body>
   <div class="d-flex justify-content-center align-items-center vh-100 bg-primary-subtle">
@@ -91,13 +89,13 @@ h1 {
           <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
         </div>
         <div class="d-flex justify-content-between align-items-center">
-          <button type="submit" class="btn btn-danger w-100">Sign In</button>
+          <button id="loginf" type="button" class="btn btn-danger w-100">Sign In</button>
         </div>
         <div class="text-center mt-3">
-          <a href="#" class="text-primary">Forgot Password?</a>
+          <a href="Forgot Password.html" class="text-primary">Forgot Password?</a>
         </div>
         <div class="text-center mt-3">
-          <p>Don't have an account? <a href="#" class="text-danger">Sign up</a></p>
+          <p>Don't have an account? <a href="signup.html" class="text-danger">Sign up</a></p>
         </div>
       </form>
     </div>
@@ -105,5 +103,11 @@ h1 {
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("loginf").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent the default button behavior
+      window.location.href = "home.html"; // Redirect to the homepage
+    });
+  </script>
 </body>
 </html>
