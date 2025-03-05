@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parking Reservation Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            opacity: 0; /* Initial opacity */
+            animation: fadeIn 1s forwards, slideInFromLeft 1s ease-out forwards; /* Animations */
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            animation: slideInFromLeft 1s ease-out forwards;
+        }
+        
+        label {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+            animation: slideInFromLeft 1s ease-out forwards;
+        }
+        
+        input[type="text"], input[type="tel"], input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            animation: slideInFromLeft 1s ease-out forwards;
+        }
+        
+        input[type="text"]:focus, input[type="tel"]:focus {
+            border-color: #8b0000;
+        }
+        
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color:#8b0000;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: slideInFromLeft 1s ease-out forwards;
+        }
+        
+        button:hover {
+            background-color: #8b0000;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .input-group {
+            position: relative;
+        }
+        
+        .input-group input[type="file"] {
+            padding: 10px;
+            font-size: 14px;
+        }
+        
+        .input-group label {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Car Parking Reservation</h1>
+    <form id="parkingForm">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="carType">Car Type:</label>
+            <input type="text" id="carType" required>
+        </div>
+
+        <div class="form-group input-group">
+            <label for="licensePlate">License Plate Image:</label>
+            <input type="file" id="licensePlate" accept="image/*" required>
+        </div>
+
+        <div class="form-group input-group">
+            <label for="idImage">ID Image:</label>
+            <input type="file" id="idImage" accept="image/*" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('parkingForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Your request has been submitted successfully!');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
